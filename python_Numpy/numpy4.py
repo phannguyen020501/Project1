@@ -41,6 +41,44 @@ x = np.where(arr_search%2 == 1)
 print(x)
 print("----------------------------")
 #use searchsorted() -> sort index
-x = np.searchsorted(arr )
-
-
+arr_search_sort = np.array([6,7,8,9])
+#find the indexes where value 7 should be inserted
+x = np.searchsorted(arr_search_sort, 7)
+print(x)
+print("----------------------------")
+#find the indexes where value 7 should be inserted, starting from the right
+x = np.searchsorted(arr_search_sort, 7, side="right")
+print(x)
+print("----------------------------")
+#multiple values-> find the indexes where values 2, 4, 6 should be inserted
+x = np.searchsorted(arr, [2,3,4])
+print(x)
+print("----------------------------")
+            #array sort
+arr_sort = np.array([3, 2, 0, 1])
+print(np.sort(arr_sort))
+print("----------------------------")
+#can also sort arrays of string or any type
+arr_sort_str = np.array(["banana", "cherry", "apple"])
+print(np.sort(arr_sort_str))
+print("----------------------------")
+arr_sort_bln = np.array([True, False, True])
+print(np.sort(arr_sort_bln))
+print("----------------------------")
+#sorting a 2D array
+arr_sort_2D = np.array([[3,2,4],[5,0,1]])
+print(np.sort(arr_sort_2D))
+print("----------------------------")
+            #filter array
+#if the value at index in True, the ele is contained in the filtered arrays, else that element
+#is excluded from the filtered  array
+arr = np.array([41,42,43,44])
+x = [True, False, True, False]
+newarr = arr[x]
+print(newarr)
+print("----------------------------")
+arr = np.array([1,2,3,4,5,6,7])
+filter_arr = arr%2 == 0
+newarr = arr[filter_arr]
+print(filter_arr)
+print(newarr)
