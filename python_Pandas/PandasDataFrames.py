@@ -22,5 +22,5 @@ print("--------------------------")
 #locate named index -> loc() -> return row(s) : hàng
 print(df.loc["day2"])
 #load files into a dataFrame
-df = pd.read_csv('annual-enterprise-survey-2020-financial-year-provisional-csv.csv')
+df = pd.read_csv('data.csv')
 print(df)
