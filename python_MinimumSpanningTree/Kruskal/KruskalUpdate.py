@@ -73,6 +73,7 @@ class Graph:
                 mininumCost += weight
                 print("%d -- %d == %d" %(u, v, weight))
             print("Mininum Spanning Tree", mininumCost)
+            print("result = ",result)
         return result
 
 def readFileInput(filename):
@@ -134,7 +135,7 @@ def dGraphUpdate(listDT, listMST ):
         G.add_edge( listDT[i][0], listDT[i][1], weight = float( listDT[i][2] ))
     edge=[( u,v ) for ( u,v,d ) in G.edges( data=True )]
     edgeMST = []
-    rsMST = 0;
+    rsMST = 0
     for i in range( len( listMST ) ):
         x = listMST[i][0]
         y = listMST[i][1]
@@ -158,7 +159,7 @@ def dGraphUpdate(listDT, listMST ):
     nx.draw_networkx_nodes( G, position, node_size=180,  node_color='#cc0c38' ,node_shape='o', alpha=0.5 )
 
     #Drawing Edges Function
-    nx.draw_networkx_edges( G, position, edgelist=edge, width=2, edge_color='black', alpha=0.5 )
+    nx.draw_networkx_edges( G, position, edgelist=edge, width=0.5, edge_color='gray', alpha=0.5 )
     nx.draw_networkx_edges( G, position, edgelist=edgeMST, width=2, edge_color='red', alpha=0.5 )
 
     #Drawing Labels
