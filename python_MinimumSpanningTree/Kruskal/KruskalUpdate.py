@@ -175,5 +175,5 @@ def dGraphUpdate(listDT, listMST ):
 
 g = readFileInput("input2.txt")
 rs = g.KruskalMST()
-#dGraph(rs)
-dGraphUpdate(g.graph, rs)
+dGraph(g.graph)
+#dGraphUpdate(g.graph, rs)
