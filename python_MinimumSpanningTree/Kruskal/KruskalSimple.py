@@ -87,5 +87,5 @@ def readFileInput(filename):
     f.close()
     return g
 
-g = readFileInput("input2.txt")
+g = readFileInput("../Input/input2.txt")
 g.KruskalMST()

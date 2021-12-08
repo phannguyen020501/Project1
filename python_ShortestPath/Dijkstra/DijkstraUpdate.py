@@ -72,7 +72,7 @@ def readFileInput(filename):
     f.close()
     return g
 
-g = readFileInput('input.txt')
+g = readFileInput('../Input/input.txt')
 print(g.graph)
 g.dijkstra(1)
 

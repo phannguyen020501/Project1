@@ -50,8 +50,10 @@ def printPath(path):
 
 def readfileInput(filename):
     f = open(filename, 'r')
+    V = int(f.readline())
     i = 0
     graphdata =[]
+    i = 0
     while True:
         data = f.readline().strip()
         if data == '':
@@ -59,12 +61,15 @@ def readfileInput(filename):
         data = data.split(" ")
 
         z = []
+        j = 0
         for x in data:
-            if(x != 'INF'):
-                z.append((float(x)))
-            else:
+            if(float(x) == 0 and i != j):
                 z.append(INF)
+            else:
+                z.append(float(x))
+            j = j+1
         graphdata.append(z)
+        i = i+1
     f.close()
     return graphdata
 
@@ -74,9 +79,10 @@ if __name__== '__main__':
     dis = [[-1 for i in range(MAXM)] for i in range(MAXM)]
     Next = [[-1 for i in range(MAXM)] for i in range(MAXM)]
 
-    graph = readfileInput('input2.txt')
+    graph = readfileInput('../Input/input2.txt')
     V = len(graph)
-
+    print(V)
+    print("graph ", graph)
     initialise(V)
     floydWarshall(V)
     path =[]
