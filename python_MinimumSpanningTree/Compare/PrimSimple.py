@@ -2,7 +2,7 @@
 # The program is for adjacency matrix representation of the graph
 
 import sys # Library for INT_MAX
-
+import time
 class Graph():
 
 	def __init__(self, vertices):
@@ -72,27 +72,51 @@ class Graph():
 			if(parent[i] == -1): continue
 			print('(',i,',', parent[i],')  ', key[i])
 
+	def __init__(self, filename):
+		f = open(filename, 'r')
+		n = int(f.readline())
+
+		self.V = n
+		self.graph = []
+		i = 0
+		while True:
+			data = f.readline().strip()
+			if data == '':
+				break
+			data = data.split(" ")
+			z = []
+			for x in data:
+				z.append(float(x))
+			self.graph.append(z)
+		f.close()
+
+	def calculatetime(self):
+		start = time.time()
+		print("start: ",start)
+		self.primMST()
+		end = time.time()
+		print("end: ", end)
+		return end-start
+
 def readFileInput(filename):
-    f = open(filename, 'r')
-
-    n = int(f.readline())
-    g = Graph(n)
-    i = 0
-    while True:
-        data = f.readline().strip()
-        if data == '':
-            break
-        data = data.split(" ")
-
-        z = []
-        for x in data:
-            z.append(float(x))
-        g.graph.append(z)
-    f.close()
-    return g
+	f = open(filename, 'r')
+	n = int(f.readline())
+	g = Graph(n)
+	i = 0
+	while True:
+		data = f.readline().strip()
+		if data == '':
+			break
+		data = data.split(" ")
+		z = []
+		for x in data:
+			z.append(float(x))
+		g.graph.append(z)
+	f.close()
+	return g
 
 
 
-g = readFileInput('../Input/input5000.txt')
-g.primMST();
-
+# g = Graph('../Input/input1000.txt')
+# t1 = g.calculatetime()
+# print("t1: ", t1)

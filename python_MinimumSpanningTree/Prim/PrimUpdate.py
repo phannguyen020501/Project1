@@ -141,7 +141,7 @@ def readFileInput(filename):
     return g
 
 
-g = readFileInput("../Input/input2.txt")
+g = readFileInput("../Input/input3.txt")
 print("graph = ",g.graph)
 rs = g.primMST()
 

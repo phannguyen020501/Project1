@@ -1,6 +1,5 @@
 from scipy.sparse import csr_matrix
 from scipy.sparse.csgraph import minimum_spanning_tree
-
 class Graph:
     def __init__(self, verticies):
         self.V = verticies  #no of vertices

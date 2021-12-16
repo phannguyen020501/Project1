@@ -79,7 +79,7 @@ if __name__== '__main__':
     dis = [[-1 for i in range(MAXM)] for i in range(MAXM)]
     Next = [[-1 for i in range(MAXM)] for i in range(MAXM)]
 
-    graph = readfileInput('../Input/input2.txt')
+    graph = readfileInput('../Input/input.txt')
     V = len(graph)
     print(V)
     print("graph ", graph)

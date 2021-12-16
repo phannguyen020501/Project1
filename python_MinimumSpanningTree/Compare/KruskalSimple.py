@@ -90,7 +90,7 @@ class Graph:
     def calculatetime(self):
         start = time.time()
         print("start: ",start)
-        g.KruskalMST()
+        self.KruskalMST()
         end = time.time()
         print("end: ", end)
         return end-start
@@ -114,10 +114,6 @@ def readFileInput(filename):
     f.close()
     return g
 
-g = Graph('../Input/input1000.txt')
-timerun = g.calculatetime()
-print(timerun)
-
-
-
+# g = Graph('../Input/input.txt')
+# g.calculatetime();
 
