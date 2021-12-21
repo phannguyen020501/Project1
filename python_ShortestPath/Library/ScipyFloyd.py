@@ -36,7 +36,7 @@ def printpath(start, end, predecessor):
         print(stack.pop() ,end = " ")
     print()
 
-g = readFileInput('../Input/input5000.txt')
+g = readFileInput('../Input/input1000.txt')
 V = len(g.graph)
 node = []
 for i in range(V):
