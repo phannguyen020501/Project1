@@ -3,10 +3,12 @@ print(x)
 print(y)
 print(z)
 print("--------------------------------")
-#global variable
 
+
+#global variable
 a = "awesome"
 def myfunc():
+    #biến địa phương
     a = "fantastic"
     print("Python is "+ a)
 

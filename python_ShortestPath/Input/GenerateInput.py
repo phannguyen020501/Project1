@@ -1,6 +1,6 @@
 import numpy as np
 
-N = 1000
+N = 50000
 b = np.random.randint(0,2000,size=(N,N))
 
 for i in range(N):
@@ -8,7 +8,7 @@ for i in range(N):
 
 print(b)
 
-f = open('input1000.txt',"w")
+f = open('input5000.txt',"w")
 f.writelines(str(N)+'\n')
 for i in range(N):
     for j in range(N):

@@ -2,7 +2,7 @@ from KruskalSimple import Graph as GraphKst
 from ScipyMST import Graph as GraphScipy
 from PrimSimple import Graph as GraphPrim
 
-pathfile ='../Input/input.txt'
+pathfile ='../Input/input10000.txt'
 
 g1  = GraphKst(pathfile)
 time1 = g1.calculatetime()

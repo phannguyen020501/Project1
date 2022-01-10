@@ -1,6 +1,6 @@
 from ScipyFloyd import Graph as graphScipy
 from floyd import Graph as graphByMe
-filename = "../Input/input.txt"
+filename = "../Input/input500.txt"
 
 g1 = graphByMe(filename)
 t1 = g1.CalTime()
